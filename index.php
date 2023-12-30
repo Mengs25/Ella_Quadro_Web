@@ -1,106 +1,123 @@
 <!DOCTYPE html>
+<?php include_once("../db.php")?>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visitor Homepage</title>
-    <link rel="stylesheet" href="/bootstrap-5.3.2-dist/css/bootstrap.css">
+    <title>ADMIN PAGE</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../style.css" />
-    <!-- Add other CSS stylesheets if needed -->
-    <style>
-        .navbar-container {
-            display: flex;
-            justify-content: space-between; /* Updated to space-between */
-            align-items: center;
-            background-color: #f8f9fa;
-            padding: 10px;
-        }
-
-        .navbar-logo,
-        .navbar-search {
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar-logo img {
-            margin-right: 10px; /* Add margin for spacing between logo and search */
-        }
-
-        .navbar-search form {
-            margin-bottom: 0;
-        }
-
-        .nav-item {
-            margin-right: 15px;
-        }
-
-        .nav-link {
-            margin-bottom: 0;
-        }
-        
-        .picture-container {
-            display: flex;
-            justify-content: space-between; /* Updated to space-between */
-            align-items: center;
-            background-color: rgb(238, 237, 226);
-            padding: 5px;
-        }
-
-        .text {
-            margin-right: 5%; 
-            margin-bottom: 15%;
-            font-size: 30px;
-        }
-        
-       
-
-    </style>
 </head>
-<header>
 
-<body style="background-color: rgb(238, 237, 226);">
-
-    <div class="container-fluid navbar-container">
-        <div class="navbar-logo">
-            <a><img src="tc.jpg" alt="Logo" width="40" height="24" class="d-inline-block align-text-top">TOKEN CORE</a>
-    </div>
-            <nav class="nav-item" style="margin-left: 80%">  
-                <a class="nav-link" href="index.php">Login</a>
-            </nav>
-            <nav class="nav-item">
-                <a class="nav-link" href="registration.php">Signup</a>
-            </nav>
-        </div>
-    </div>
-    </header>
-    <hr />
-
-    <div class="container mt-4 text-center">
-        <nav class="navbar-links d-inline-block">
-            <a class="nav-link active navbar-link" aria-current="page" href="index.php">Home</a>
-            <a class="nav-link navbar-link" href="visitor_explore.php">Explore</a>
-            <a class="nav-link navbar-link" href="#">Contact</a>
-            <a class="nav-link navbar-link" href="about_us.php">About Us</a>
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <img src="../pictures/token core logo.jpg" alt="..." class="logo">
+        <nav class="navbar navbar-expand-lg">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="" class="nav-link">WELCOME GUEST</a>
+            </li>
+          </ul>
         </nav>
-    </div>
-      
-    <div class="container-fluid picture-container">
-        <div class="img">
-            <img src="token core logo.jpg" />
-        </div>
-       <div class="text">
-                <h1>TOKEN CORE</h1><span>
-                    <h3 style="font-size:20px"> The merchandise in which full of surprises awaits you. </h3>
-                </span><span><button style="background-color:beige"  href="visitor_explore.php">Explore</button>
-                    </span> 
-    </div>   
+      </div>
+    </nav>
+  </div>
 
-    <script src="/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
-   
-    
+  <div class="bg-light">
+    <h3 class="text-center p-2"> Manage Details </h3>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 --bs-warning-bg-subtle">
+      <div>
+        <p class="text-dark text-center"> Admin Name </p>
+      </div>
+
+      <div class="button text-center">
+        <button><a href="index.php?view_items" class="nav-link text-dark my-1">VIEW ITEMS</a></button>
+        <button><a href="index.php?insert_items" class="nav-link text-dark my-1">INSERT ITEMS</a></button>
+        <button><a href="index.php?view_categories" class="nav-link text-dark my-1">VIEW CATEGORIES</a></button>
+        <button><a href="index.php?insert_category" class="nav-link text-dark my-1">INSERT CATEGORIES</a></button>
+        <button><a href="index.php?view_custom_property" class="nav-link text-dark my-1">VIEW CUSTOM PROPERTY</a></button>
+        <button><a href="index.php?custom_property" class="nav-link text-dark my-1">INSERT CUSTOM PROPERTY</a></button>
+        <button><a href="index.php?view_variation" class="nav-link text-dark my-1">VIEW VARIATIONS</a></button>
+        <button><a href="index.php?variation" class="nav-link text-dark my-1">INSERT VARIATIONS</a></button>
+        <button><a href="index.php?insert_price" class="nav-link text-dark my-1">INSERT PRICE</a></button>
+        <button><a href="index.php?view_price" class="nav-link text-dark my-1">VIEW PRICE</a></button>
+        <button><a href="index.php?insert_stock" class="nav-link text-dark my-1">INSERT STOCK</a></button>
+        <button><a href="index.php?view_stock" class="nav-link text-dark my-1">VIEW STOCK</a></button>
+        <button><a href="index.php?orders_detail" class="nav-link text-dark my-1">ORDER DETAILS</a></button>
+        <button><a href="index.php?user_details" class="nav-link text-dark my-1">USER DETAILS</a></button>
+        <button><a href="index.php?sales_report" class="nav-link text-dark my-1">SALES REPORT</a></button>
+        <button><a href="index.php?sold_items" class="nav-link text-dark my-1">SOLD ITEMS</a></button>
+        <button><a href="#" class="nav-link text-dark my-1">LOGOUT</a></button>
+      </div>
+   <hr>
+      <div>
+        <?php
+        if (isset($_GET['insert_category'])) {
+          include('insert_category.php');
+        }
+        if (isset($_GET['insert_items'])) {
+          include('insert_items.php');
+        }
+        if (isset($_GET['custom_property'])) {
+          include('custom_property.php');
+        }
+        if (isset($_GET['variation'])) {
+          include('variation.php');
+        }
+        if (isset($_GET['view_items'])) {
+          include('view_items.php');
+        }
+        if (isset($_GET['edit_items'])) {
+          include('edit_items.php');
+        }
+        if (isset($_GET['insert_price'])) {
+          include('insert_price.php');
+        }
+        if (isset($_GET['insert_stock'])) {
+          include('insert_stock.php');
+        }
+        if (isset($_GET['orders_detail'])) {
+          include('orders_detail.php');
+        }
+        if (isset($_GET['user_details'])) {
+          include('user_details.php');
+        }
+        if (isset($_GET['view_custom_property'])) {
+          include('view_custom_property.php');
+        }
+        if (isset($_GET['view_variation'])) {
+          include('view_variation.php');
+        }
+        if (isset($_GET['view_categories'])) {
+          include('view_categories.php');
+        }
+        if (isset($_GET['view_price'])) {
+          include('view_price.php');
+        }
+        if (isset($_GET['view_stock'])) {
+          include('view_stock.php');
+        }
+        if (isset($_GET['sales_report'])) {
+          include('sales_report.php');
+        }
+        if (isset($_GET['sold_items'])) {
+          include('sold_items.php');
+        }
+       
+        ?>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../js/bootstrap.js"></script>
 </body>
-    
 
 </html>
